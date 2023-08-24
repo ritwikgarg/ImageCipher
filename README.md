@@ -1,6 +1,8 @@
 # ImageCipher
 A cryptography and steganography technique used to encrypt and decrypt plain text into an image.
 
+Try it out at : <a href="https://imagecipher.streamlit.app/">imagecipher.streamlit.app</a>
+
 <h2>How do I use this?</h2>
 <ul>
   <li>Install the Pillow library by running 'pip install Pillow' in your command prompt</li>
