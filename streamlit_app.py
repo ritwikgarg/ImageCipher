@@ -3,11 +3,12 @@ import streamlit as st
 import subprocess
 import base64
 
-try:
-    from PIL import Image
-except ModuleNotFoundError:
-    subprocess.run(["pip", "install", "Pillow"])
-    from PIL import Image  # Import again after installation
+# Verify installed packages
+result = subprocess.run(["pip", "freeze"], capture_output=True, text=True)
+print(result.stdout)  # This will log all installed packages to the logs for debugging
+
+# Force reinstall Pillow
+subprocess.run(["pip", "install", "--force-reinstall", "Pillow"])
 
 def get_image_download_link(img_path, filename):
     with open(img_path, "rb") as img_file:
