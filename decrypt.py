@@ -13,11 +13,11 @@ EncryptedImage = Image.open('enc.png')
 encRGB         = EncryptedImage.convert("RGB")
 
 privateKey     = Image.open('pk.png')
-PK = privateKey.resize((256,256),Image.ANTIALIAS)
+PK = privateKey.resize((256,256),Image.LANCZOS)
 priRGB         = PK.convert("RGB")
 
 publicKey      = Image.open('pub.png')
-PUK = publicKey.resize((256,256),Image.ANTIALIAS)
+PUK = publicKey.resize((256,256),Image.LANCZOS)
 publRGB        = PUK.convert("RGB")
 
 DECRimg = Image.new('RGB',(256,256),color = (0,0,0))

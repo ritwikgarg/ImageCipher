@@ -10,14 +10,14 @@ from random import randint
 # Import/create images and their pixel maps. 
 # The images are also resized to 256 x 256.
 PK = Image.open("pk.png","r")   
-PK = PK.resize((256,256),Image.ANTIALIAS)
+PK = PK.resize((256,256),Image.LANCZOS)
 PKrgb = PK.convert("RGB")
 
 MSG = Image.open("msgImg.png","r")
 MSGrgb = MSG.convert("RGB")
 
 PUB = Image.open("pub.png","r")
-PUB = PUB.resize((256,256),Image.ANTIALIAS)
+PUB = PUB.resize((256,256),Image.LANCZOS)
 PUBrgb = PUB.convert("RGB")
 
 ENCRimg = Image.new('RGB',(256,256),color = (0,0,0))
