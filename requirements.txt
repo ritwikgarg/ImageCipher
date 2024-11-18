@@ -1,5 +1,5 @@
 streamlit
-pillow
+Pillow
 random
 urllib3
 base64
